@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唐老師言行與中華文化美德對應診斷系統</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Calligraphic & Traditional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        xuan: {
+                            50: '#FDFBF7',
+                            100: '#FAF7F0',
+                            200: '#F2EBDC',
+                            300: '#E4D8C4',
+                            400: '#D2C2A9',
+                        },
+                        bamboo: {
+                            50: '#F1F6F3',
+                            100: '#E0ECE4',
+                            500: '#6B8E75',
+                            700: '#486A53',
+                            800: '#2D5A42',
+                            900: '#1C3B2B',
+                        },
+                        cinnabar: {
+                            600: '#B83232',
+                            700: '#9E2A2B',
+                            800: '#7A1E1F',
+                        },
+                        bronze: {
+                            500: '#B5904B',
+                            600: '#9C7A44',
+                            700: '#7A5E30',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'STKaiti', 'KaiTi', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-paper: #FAF7F0;
+            --bg-card: rgba(255, 253, 248, 0.92);
+            --ink-black: #1A201C;
+            --bamboo-green: #2D5A42;
+            --cinnabar-red: #9E2A2B;
+            --bronze-gold: #9C7A44;
+            --border-line: #E4D8C4;
+        }
+
+        body {
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            background-color: var(--bg-paper);
+            color: var(--ink-black);
+            line-height: 1.85;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Calligraphic Double Frame Card */
+        .ancient-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-line);
+            position: relative;
+            box-shadow: 0 8px 30px rgba(45, 90, 66, 0.05);
+        }
+
+        .ancient-card::before {
+            content: "";
+            position: absolute;
+            top: 5px; left: 5px; right: 5px; bottom: 5px;
+            border: 1px solid var(--border-line);
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        /* Cinnabar Red Seal Stamp */
+        .seal-stamp {
+            width: 105px;
+            height: 105px;
+            border: 3px double var(--cinnabar-red);
+            color: var(--cinnabar-red);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 900;
+            transform: rotate(-3deg);
+            background: rgba(158, 42, 43, 0.04);
+            box-shadow: 0 0 0 2px rgba(158, 42, 43, 0.12), inset 0 0 10px rgba(158, 42, 43, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .seal-stamp.pos { 
+            border-color: var(--bamboo-green); 
+            color: var(--bamboo-green); 
+            background: rgba(45, 90, 66, 0.04);
+            box-shadow: 0 0 0 2px rgba(45, 90, 66, 0.12);
+        }
+
+        .seal-stamp.warn { 
+            border-color: var(--bronze-gold); 
+            color: var(--bronze-gold); 
+            background: rgba(156, 122, 68, 0.04);
+            box-shadow: 0 0 0 2px rgba(156, 122, 68, 0.12);
+        }
+
+        .seal-stamp.neg { 
+            border-color: var(--cinnabar-red); 
+            color: var(--cinnabar-red); 
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: #FAF7F0; }
+        ::-webkit-scrollbar-thumb { background: #D2C2A9; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2D5A42; }
+    </style>
+</head>
+<body class="py-8 px-3 sm:px-6 relative">
+
+    <!-- LIGHT WATERCOLOR BAMBOO WATERMARK BACKGROUND -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-20">
+        <!-- LEFT BAMBOO CLUSTER -->
+        <svg class="absolute left-0 bottom-0 w-80 sm:w-[450px] h-full" viewBox="0 0 400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M70 900 L70 0" stroke="#2D5A42" stroke-width="14" stroke-dasharray="140 4 110 4 160 4"/>
+            <path d="M130 900 L130 0" stroke="#486A53" stroke-width="18" stroke-dasharray="130 5 150 5 120 5"/>
+            <path d="M190 900 L190 0" stroke="#6B8E75" stroke-width="12" stroke-dasharray="100 4 140 4 110 4"/>
+            <path d="M240 900 L240 100" stroke="#8EA68B" stroke-width="8" stroke-dasharray="90 3 120 3"/>
+
+            <line x1="61" y1="200" x2="79" y2="200" stroke="#1C3B2B" stroke-width="3"/>
+            <line x1="61" y1="350" x2="79" y2="350" stroke="#1C3B2B" stroke-width="3"/>
+            <line x1="61" y1="490" x2="79" y2="490" stroke="#1C3B2B" stroke-width="3"/>
+            <line x1="61" y1="650" x2="79" y2="650" stroke="#1C3B2B" stroke-width="3"/>
+
+            <line x1="119" y1="150" x2="141" y2="150" stroke="#1C3B2B" stroke-width="4"/>
+            <line x1="119" y1="310" x2="141" y2="310" stroke="#1C3B2B" stroke-width="4"/>
+            <line x1="119" y1="470" x2="141" y2="470" stroke="#1C3B2B" stroke-width="4"/>
+            <line x1="119" y1="620" x2="141" y2="620" stroke="#1C3B2B" stroke-width="4"/>
+
+            <g fill="#2D5A42">
+                <path d="M70 200 C40 180 10 170 0 175 C20 190 45 205 70 200 Z"/>
+                <path d="M70 200 C50 220 20 240 10 250 C30 245 55 225 70 200 Z"/>
+                <path d="M70 200 C90 170 120 150 140 145 C125 165 100 185 70 200 Z"/>
+                <path d="M70 200 C100 210 130 225 150 230 C130 225 100 215 70 200 Z"/>
+            </g>
+            <g fill="#486A53">
+                <path d="M130 310 C100 280 60 260 40 255 C65 275 100 295 130 310 Z"/>
+                <path d="M130 310 C110 340 70 370 50 385 C80 370 110 340 130 310 Z"/>
+                <path d="M130 310 C160 290 200 280 220 275 C195 295 160 305 130 310 Z"/>
+            </g>
+        </svg>
+
+        <!-- RIGHT BAMBOO ACCENTS -->
+        <svg class="absolute right-0 bottom-0 w-72 sm:w-[380px] h-full" viewBox="0 0 350 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M280 900 L280 150" stroke="#486A53" stroke-width="14" stroke-dasharray="120 4 150 4"/>
+            <path d="M210 900 L210 250" stroke="#6B8E75" stroke-width="10" stroke-dasharray="100 3 130 3"/>
+            <g fill="#486A53">
+                <path d="M280 350 C310 330 340 320 360 325 C335 340 305 350 280 350 Z"/>
+                <path d="M280 350 C250 330 215 310 195 305 C220 325 255 340 280 350 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+
+        <!-- SYSTEM HEADER -->
+        <header class="ancient-card p-6 sm:p-8 rounded-sm text-center border-t-4 border-b-4 border-bamboo-800">
+            <div class="inline-flex items-center space-x-2 text-xs font-bold text-bronze-600 bg-bronze-500/10 px-4 py-1 rounded-full border border-bronze-500/30 mb-3 tracking-widest font-serif">
+                <span>❖ DSE 寫作專題評估</span>
+                <span>•</span>
+                <span>2012 卷二第一題「唐老師」</span>
+            </div>
+            
+            <h1 class="text-2xl sm:text-4xl font-black font-serif text-bamboo-900 tracking-wider mb-2">
+                唐老師言行與中華文化美德對應診斷系統
+            </h1>
+            
+            <p class="text-xs sm:text-sm text-ink-700 font-serif max-w-2xl mx-auto leading-relaxed">
+                「你不喜歡說大道理，從你平日待人接物，我體會到中國文化可貴的一面。」
+            </p>
+        </header>
+
+        <!-- 3-TAB NAVIGATION BAR -->
+        <nav class="flex border-b-2 border-bamboo-800 space-x-1 sm:space-x-2 font-serif text-xs sm:text-sm">
+            <button 
+                id="tabBtn1" 
+                onclick="switchTab(1)" 
+                class="flex-1 py-3 px-2 sm:px-4 text-center font-bold border-t border-l border-r border-bamboo-800 rounded-t-sm transition-all duration-200 bg-bamboo-800 text-xuan-50 shadow-sm"
+            >
+                ✍️ 頁面一：寫作構思與診斷
+            </button>
+            
+            <button 
+                id="tabBtn2" 
+                onclick="switchTab(2)" 
+                class="flex-1 py-3 px-2 sm:px-4 text-center font-bold border-t border-l border-r border-xuan-300 rounded-t-sm transition-all duration-200 bg-xuan-100 text-bamboo-900 hover:bg-xuan-200"
+            >
+                🟢 頁面二：上品契合範例 (10個)
+            </button>
+            
+            <button 
+                id="tabBtn3" 
+                onclick="switchTab(3)" 
+                class="flex-1 py-3 px-2 sm:px-4 text-center font-bold border-t border-l border-r border-xuan-300 rounded-t-sm transition-all duration-200 bg-xuan-100 text-cinnabar-700 hover:bg-xuan-200"
+            >
+                🔴 頁面三：下品與排雷範例 (10個)
+            </button>
+        </nav>
+
+        <!-- TAB CONTENT 1: INPUT & DIAGNOSIS WORKSTATION -->
+        <div id="tabContent1" class="space-y-6">
+            
+            <!-- INPUT CARD -->
+            <div class="ancient-card p-6 sm:p-8 rounded-sm space-y-6">
+                <h2 class="text-lg font-bold font-serif text-bamboo-900 border-b border-xuan-300 pb-2 flex items-center gap-2">
+                    <span class="text-bronze-600">❖</span> 學生寫作構思輸入區
+                </h2>
+
+                <!-- FIELD 1: DEED DESCRIPTION -->
+                <div class="space-y-2">
+                    <label for="deedInput" class="block font-serif font-bold text-sm text-bamboo-900">
+                        一、唐老師的言行事例描述 <span class="text-cinnabar-600">*</span>
+                    </label>
+                    <textarea 
+                        id="deedInput" 
+                        rows="4" 
+                        placeholder="請詳細記述唐老師在校園生活中的具體言行（例如：動作、語言、態度及事情經過）..."
+                        class="w-full p-3.5 bg-xuan-50 border border-xuan-300 rounded-sm font-serif text-xs sm:text-sm text-ink-900 focus:outline-none focus:border-bamboo-800 transition"
+                    ></textarea>
+                </div>
+
+                <!-- FIELD 2: VIRTUE INPUT -->
+                <div class="space-y-2">
+                    <label for="virtueInput" class="block font-serif font-bold text-sm text-bamboo-900">
+                        二、對應的中華文化美德 / 價值觀 <span class="text-cinnabar-600">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="virtueInput" 
+                        placeholder="例如：仁愛包容、因材施教、溫良恭儉讓、誠信身教..."
+                        class="w-full p-3 bg-xuan-50 border border-xuan-300 rounded-sm font-serif text-xs sm:text-sm text-ink-900 focus:outline-none focus:border-bamboo-800 transition"
+                    />
+
+                    <!-- TAG CHIPS -->
+                    <div class="pt-1">
+                        <span class="text-xs text-ink-700 font-serif block mb-1.5">常用美德標籤（點擊填入）：</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            <button onclick="selectTag('仁愛包容')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">仁愛包容</button>
+                            <button onclick="selectTag('因材施教')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">因材施教</button>
+                            <button onclick="selectTag('溫良恭儉讓')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">溫良恭儉讓</button>
+                            <button onclick="selectTag('誠信身教')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">誠信身教</button>
+                            <button onclick="selectTag('寬容恕道')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">寬容恕道</button>
+                            <button onclick="selectTag('勤勉敬業')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">勤勉敬業</button>
+                            <button onclick="selectTag('見義勇為')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">見義勇為</button>
+                            <button onclick="selectTag('尊嚴與平等')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">尊嚴與平等</button>
+                            <button onclick="selectTag('自省與謙遜')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">自省與謙遜</button>
+                            <button onclick="selectTag('誨人不倦')" class="px-2.5 py-1 text-xs font-serif bg-xuan-50 border border-xuan-300 hover:border-bamboo-700 hover:text-bamboo-800 transition rounded-sm">誨人不倦</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUBMIT & RESET -->
+                <div class="flex gap-3 pt-2">
+                    <button 
+                        onclick="diagnoseInput()" 
+                        class="flex-2 w-full py-3.5 bg-bamboo-800 hover:bg-bamboo-900 text-xuan-50 font-serif font-bold text-sm tracking-widest rounded-sm shadow-md transition"
+                    >
+                        ✦ 提交評估診斷 ✦
+                    </button>
+                    <button 
+                        onclick="resetForm()" 
+                        class="py-3.5 px-6 bg-transparent hover:bg-xuan-200 text-ink-700 font-serif border border-xuan-300 text-xs rounded-sm transition"
+                    >
+                        重置清空
+                    </button>
+                </div>
+            </div>
+
+            <!-- DIAGNOSIS RESULT CARD -->
+            <div id="resultCard" class="ancient-card p-6 sm:p-8 rounded-sm space-y-6 hidden">
+                <div class="flex justify-between items-start border-b border-dashed border-xuan-300 pb-4">
+                    <div>
+                        <h2 id="resTitle" class="text-xl font-bold font-serif text-bamboo-900">評估診斷報告</h2>
+                        <p id="resTimeStamp" class="text-xs text-ink-700 font-serif mt-1">評估時間：--</p>
+                    </div>
+
+                    <div id="ratingSeal" class="seal-stamp pos">
+                        <span id="sealText" class="seal-text">上品</span>
+                        <span id="sealSub" class="seal-sub">切合題意</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 1 -->
+                <div class="space-y-1.5">
+                    <h3 class="text-sm font-bold font-serif text-bamboo-900 flex items-center gap-1.5">
+                        <span class="text-bronze-600">✦</span> 美德與事例契合度分析
+                    </h3>
+                    <div id="cohesionAnalysis" class="p-4 bg-xuan-50 border-l-4 border-bamboo-800 text-xs sm:text-sm text-ink-900 font-serif leading-relaxed">--</div>
+                </div>
+
+                <!-- SECTION 2 -->
+                <div class="space-y-1.5">
+                    <h3 class="text-sm font-bold font-serif text-bamboo-900 flex items-center gap-1.5">
+                        <span class="text-cinnabar-600">⚠️</span> 考評局失分陷阱 / 排雷警告
+                    </h3>
+                    <div id="trapAnalysis" class="p-4 bg-xuan-50 border-l-4 border-amber-600 text-xs sm:text-sm text-ink-900 font-serif leading-relaxed">--</div>
+                </div>
+
+                <!-- SECTION 3 -->
+                <div class="space-y-1.5">
+                    <h3 class="text-sm font-bold font-serif text-bamboo-900 flex items-center gap-1.5">
+                        <span class="text-bronze-600">💡</span> 細節描寫與深化建議
+                    </h3>
+                    <div id="adviceAnalysis" class="p-4 bg-xuan-50 border-l-4 border-bronze-600 text-xs sm:text-sm text-ink-900 font-serif leading-relaxed">--</div>
+                </div>
+
+                <!-- SECTION 4 -->
+                <div class="space-y-1.5 pt-2">
+                    <h3 class="text-sm font-bold font-serif text-bamboo-900 flex items-center gap-1.5">
+                        <span>✨</span> 【系統提煉 · 寫作立意】（可作文章結尾昇華）
+                    </h3>
+                    <div id="themeText" class="p-5 bg-bronze-500/10 border border-bronze-600/40 text-xs sm:text-sm font-serif text-amber-950 leading-relaxed rounded-sm italic">--</div>
+                </div>
+
+                <!-- UTILITIES -->
+                <div class="flex flex-wrap gap-3 pt-4 border-t border-xuan-300">
+                    <button 
+                        onclick="copyReport()" 
+                        class="flex-1 py-2.5 px-4 bg-bamboo-900 hover:bg-black text-xuan-50 font-serif text-xs font-bold rounded-sm transition flex items-center justify-center gap-1"
+                    >
+                        <span>📋 複製完整診斷報告</span>
+                    </button>
+                    <button 
+                        onclick="exportOutline()" 
+                        class="py-2.5 px-5 bg-xuan-100 hover:bg-xuan-200 text-bamboo-900 font-serif text-xs border border-xuan-300 rounded-sm transition flex items-center justify-center gap-1"
+                    >
+                        <span>📥 導出寫作大綱 (.txt)</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TAB CONTENT 2: 10 UPPER-TIER POSITIVE EXAMPLES -->
+        <div id="tabContent2" class="space-y-4 hidden">
+            <div class="ancient-card p-5 rounded-sm">
+                <h2 class="text-base font-bold font-serif text-bamboo-900 flex items-center gap-2">
+                    <span>🟢 上品契合範例庫 (10個)</span>
+                </h2>
+                <p class="text-xs text-ink-700 font-serif mt-1">
+                    這些事例貼近現代校園生活，透過具體言行自然流露美德，展現唐老師「做多過講」的身教風範。點擊按鈕可直接帶入診斷頁面進行分析。
+                </p>
+            </div>
+
+            <div id="posCardsContainer" class="space-y-4"></div>
+        </div>
+
+        <!-- TAB CONTENT 3: 10 LOWER-TIER & TRAP EXAMPLES -->
+        <div id="tabContent3" class="space-y-4 hidden">
+            <div class="ancient-card p-5 rounded-sm border-l-4 border-cinnabar-700">
+                <h2 class="text-base font-bold font-serif text-cinnabar-700 flex items-center gap-2">
+                    <span>🔴 下品與錯配排雷範例庫 (10個)</span>
+                </h2>
+                <p class="text-xs text-ink-700 font-serif mt-1">
+                    包含考評局《考生表現報告》點名批評的反面教材（抽離現實符號、美化舞弊、違背孝道、鄉愿退讓、偽善說教、體罰迷信及美德錯配）。點擊按鈕可帶入頁面一測試系統排雷診斷。
+                </p>
+            </div>
+
+            <div id="negCardsContainer" class="space-y-4"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-xs text-ink-700 font-serif pt-4 pb-8 space-y-1">
+            <p>唐老師言行與中華文化美德對應診斷系統 • DSE 2012 卷二寫作專題</p>
+            <p class="opacity-75">身教重於言教 • 潤物細無聲</p>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 20 PRESETS DATA (10 POSITIVE + 10 NEGATIVE)
+        const posExamples = [
+            {
+                id: 'pos1',
+                title: '1. 顧及尊嚴的隱密關懷',
+                virtue: '仁愛包容 / 推己及人',
+                deed: '唐老師注意到班上一名家境貧困的同學經常不吃午飯。他沒有當眾發起捐款，而是私下邀請該同學放學後幫忙整理圖書館，並以「學校協助津貼」的名義發放報酬；有時多帶一份便當，也只說是「家裡做多了吃不完，請你幫忙分擔」。',
+                reason: '體現孔子「仁者愛人」與「推己及人」的實質內涵。不只給予物資幫助，更用心護持學生自尊心，真正做到「己立立人，己達達人」。'
+            },
+            {
+                id: 'pos2',
+                title: '2. 因勢利導的個性化啟發',
+                virtue: '因材施教 / 誨人不倦',
+                deed: '班上一名性格孤僻、成績欠佳的同學擅長繪畫，唐老師從不強求他在課堂上作口頭報告，而是鼓勵他為班級板報繪製插畫，並在作業本上留下溫和文字：「文字未能盡意處，你的筆觸補足了靈魂。」學生從此建立起自信，課業漸見起色。',
+                reason: '符合孔子「聽其言而觀其行」、「隨材器使」的教育智慧。沒有用統一標準否定學生，而是發現並尊重學生特點，以行動指引而非大道理說教。'
+            },
+            {
+                id: 'pos3',
+                title: '3. 勇於認錯的謙遜身教',
+                virtue: '溫良恭儉讓 / 謙遜誠信',
+                deed: '在一次課堂講解中，唐老師引用典故時出現了小疏忽，一名學生當場舉手指出錯誤。唐老師沒有運用教師權威壓制，反而停下講課，查證後當場向全班致歉，並向該同學致謝：「老師也有疏漏之處，謝謝你替全班糾正了這個錯誤。」',
+                reason: '體現「知之為知之，不知為不知」的求實態度與「躬自厚而薄責於人」的君子風範。透過日常處理錯誤的方式，展現「身教勝於言教」。'
+            },
+            {
+                id: 'pos4',
+                title: '4. 嚴以律己，關心人勝過物',
+                virtue: '寬容恕道 / 重人輕物',
+                deed: '同學在教員室遞交功課時，不小心打翻了唐老師桌上珍藏多年的紀念馬克杯。同學嚇得不斷道歉，唐老師第一時間連忙查看同學的手有沒有被碎片割傷或燙到，確認安全後溫和地笑笑說：「杯子碎了可以再買，手沒受傷就好，別放在心上。」',
+                reason: '體現儒家「躬自厚而薄責於人」與「恕道」。在突發意外中優先關心人的安全而非物質損失，展現溫厚寬容的君子度量。'
+            },
+            {
+                id: 'pos5',
+                title: '5. 平等尊重的日常禮貌',
+                virtue: '尊嚴與平等 / 禮讓謙遜',
+                deed: '每天早晨回校時，唐老師遇到校園裡的清潔工人和工友，都會主動停下腳步、點頭微笑打招呼；當工友搬運重物經過時，他會主動伸手幫忙推開重門，且幾十年如一日從不間斷。',
+                reason: '符合「禮者，敬而已矣」的文化內涵。不論對方身份尊卑皆一視同仁地予以尊重，在日常生活細節中自然流露出「禮」的修養。'
+            },
+            {
+                id: 'pos6',
+                title: '6. 言出必行的誠信身教',
+                virtue: '誠信身教 / 言出必行',
+                deed: '唐老師答應同學週末去觀看學校足球隊的決賽。比賽當天刮起大風大雨，許多家長都未有出席，但唐老師依然穿著雨衣默默站在看台上為同學加油，比賽結束後遞上熱飲料便悄然離開。',
+                reason: '體現孔子「言必信，行必果」與「人而無信，不知其可也」的處事原則。用實際行動踐行承諾，無需言詞說教即讓學生體會到誠信的力量。'
+            },
+            {
+                id: 'pos7',
+                title: '7. 換位思考的體恤包容',
+                virtue: '推己及人 / 體恤包容',
+                deed: '一名平時表現良好的同學連續三天遲到，其他老師準備予以處分。唐老師私下了解後，得知該同學是因為照顧患病臥床的母親而耽誤時間，唐老師沒有懲罰他，反而幫他協調早自習時間，並抽空為他補習缺課內容。',
+                reason: '體現「己所不欲，勿施於人」與體諒他人的「絜矩之道」。唐老師在規則之外看見學生的困境與孝心，給予溫暖的制度彈性與關懷。'
+            },
+            {
+                id: 'pos8',
+                title: '8. 潤物無聲的細緻陪伴',
+                virtue: '誨人不倦 / 潤物無聲',
+                deed: '面對文言文基礎較差的同學，唐老師沒有責怪其怠惰，而是每天在該同學的中文功課本封底，貼上一張手寫的溫馨小貼紙，寫下一句淺顯的文言成語與鼓勵話語，持續整整一個學期。',
+                reason: '展現傳統教育精神中「誨人不倦」與「潤物細無聲」的耐性。沒有居高臨下的訓誨，只有持之以恆的關愛與引導。'
+            },
+            {
+                id: 'pos9',
+                title: '9. 見義勇為的責任擔當',
+                virtue: '見義勇為 / 擔當仁愛',
+                deed: '在跨學科會議上，有老師主張嚴懲一名因家庭變故而情緒失控打破窗戶的同學。唐老師主動站出來為該同學說明原委，並承擔起輔導與跟進責任，向校方爭取給予同學改過自新的機會。',
+                reason: '體現儒家「見義不為，無勇也」的擔當精神。面對強硬處罰時，勇於為弱勢學生發聲，展現內心的正義感與對學生的真摯關愛。'
+            },
+            {
+                id: 'pos10',
+                title: '10. 功成不居的謙遜胸懷',
+                virtue: '自省與謙遜 / 功成不居',
+                deed: '唐老師指導的中文辯論隊獲得全港總冠軍，在頒獎禮後的慶功宴上，校長大加讚賞唐老師的辛勞。唐老師卻將獎牌交給隊長，溫和地說：「這是同學們無數個深夜苦練的成果，我只是在旁邊為你們遞杯水而已。」',
+                reason: '體現儒家「君子欲訥於言而敏於行」與「功成而弗居」的修養。不爭名奪利，把榮耀歸於學生，展現了高尚的為人風範。'
+            }
+        ];
+
+        const negExamples = [
+            {
+                id: 'neg1',
+                title: '1. 概念錯配：把職責常態當成特殊美德',
+                virtue: '因材施教（宣稱）',
+                deed: '唐老師每天放學後都留在教員室批改作文至深夜，每篇文章都仔細圈出錯別字，並寫下滿滿的批語，從不敷衍。',
+                reason: '認真批改作業屬於教師的「勤勉敬業 / 恪盡職守」，事例中並未體現根據不同學生的資質、性格給予「個性化引導」的動作。將常規工作硬套上「因材施教」，屬於美德概念的牽強附會。'
+            },
+            {
+                id: 'neg2',
+                title: '2. 價值觀悖謬：以違規手段表達愛護',
+                virtue: '仁愛包容 / 有教無類（宣稱）',
+                deed: '為了不讓班上的弱勢學生因為測驗不合格而面臨留級，唐老師私下在補考前將試題重點偷偷透露給該學生，並鼓勵他：「這是我為你爭取的機會，好好溫習。」',
+                reason: '事例本質上是徇私舞弊，嚴重違背了中華文化中「誠信」與「君子行事取之有道」的核心原則。以損害公平與誠信的手段來展現「愛護」，在邏輯與道德價值觀上均存在嚴重缺陷。'
+            },
+            {
+                id: 'neg3',
+                title: '3. 符號化與抽離現實：將文化簡化為古風符號',
+                virtue: '溫文爾雅 / 傳承文化（宣稱）',
+                deed: '唐老師無論春夏秋冬，每天都穿灰色中山裝，戴老夫子帽，手拿摺扇，上課搖頭晃腦，滿口之乎者也，令同學半懂不懂。',
+                reason: '考評局報告點名的典型下品失分項。將中華文化等同於古代服飾與文言口吻，既脫離現代校園生活，又缺乏實質待人接物互動，顯得虛假造作。'
+            },
+            {
+                id: 'neg4',
+                title: '4. 獨享孤芳：與待人接物無關的私人癖好',
+                virtue: '修身養性 / 中華茶道（宣稱）',
+                deed: '唐老師最喜歡在教員室泡功夫茶，有一套名貴紫砂茶具，每天花半小時洗茶、泡茶，但從不請同事喝，甚至嫌學生經過打擾他的雅興。',
+                reason: '泡茶本身是私人生活習慣，但過程完全缺乏與學生、同事的良好互動，不符合題目「待人接物」的要求。取材失當，未能展現「分享」或「仁愛」。'
+            },
+            {
+                id: 'neg5',
+                title: '5. 違背倫常：盲目犧牲家庭的極端奉獻',
+                virtue: '無私奉獻 / 敬業樂群（宣稱）',
+                deed: '唐老師為了幫我們補課，連自己重病的母親在醫院急救都沒有去探望，堅持留在課室教我們做練習，說：「學生的前途緊要過一切。」',
+                reason: '嚴重違背中華文化中最核心的「孝道」（百善孝為先）。儒家講求「修身齊家」，連至親都不顧的奉獻違背人性與倫理，不能稱之為「可貴」。'
+            },
+            {
+                id: 'neg6',
+                title: '6. 鄉愿式的無原則退讓',
+                virtue: '以和為貴 / 忍讓恕道（宣稱）',
+                deed: '面對校內霸凌事件，唐老師從不處罰欺凌者，只對被欺凌的學生說：「吃虧就是佔便宜，你忍下啦，和氣生財，大家唔好傷和氣。」',
+                reason: '中華文化講求「和而不同」與「見義勇為」。這種毫無原則的退讓是孔子鄙視的「鄉愿」，屬於懦弱與不講正義，歪曲了文化中「正氣」與「義」的涵義。'
+            },
+            {
+                id: 'neg7',
+                title: '7. 言行不一與偽善說教',
+                virtue: '仁愛包容（宣稱）',
+                deed: '唐老師每堂課用一半時間大談儒家思想，告誡我們要己所不欲勿施於人。但有一次被清潔阿姨不小心撞到，他立刻破口大罵：你盲㗎？撞到我點算！',
+                reason: '題目明言唐老師「不喜歡說大道理」。此事例不僅犯了說教大忌，更展示極度的言行不一與偽善，破壞教師形象，無法抒發敬愛之情。'
+            },
+            {
+                id: 'neg8',
+                title: '8. 以傳統為名的體罰與暴力',
+                virtue: '嚴師出高徒 / 責任心（宣稱）',
+                deed: '唐老師常說棒下出孝子嚴師出高徒，在課室準備一把厚木尺。只要有同學默書錯一個字，就用木尺重打手心十下，說：呢個係中國傳統教育方式，我係為你好。',
+                reason: '實質上是在宣揚體罰與暴力，嚴重違背現代教育理念，也與中華文化中「仁者愛人」的包容精神背道而馳。這種「嚴」只會令人恐懼。'
+            },
+            {
+                id: 'neg9',
+                title: '9. 誇張失真的矯揉造作',
+                virtue: '有教無類 / 忘我奉獻（宣稱）',
+                deed: '唐老師為了買參考書給我們，竟然賣掉了自己的房子，現在每天露宿街頭，但仍笑容滿面地回校教書。',
+                reason: '嚴重脫離真實生活的普遍情境。過度誇張失真的情節會讓文章失去真實感與說服力，顯得荒謬造作，無法引發共鳴。'
+            },
+            {
+                id: 'neg10',
+                title: '10. 迷信強迫的牽強附會',
+                virtue: '敬畏天地 / 尊師重道（宣稱）',
+                deed: '唐老師非常迷信，在教員室桌上擺滿風水陣，強迫學生進入課室前必須先拜三拜，說這是中國傳統的尊師重道儀式。',
+                reason: '將迷信與個人強迫行為包裝成「傳統文化」，屬於牽強附會。孔子云：「敬鬼神而遠之。」盲目迷信不符合中華文化中理性的核心價值。'
+            }
+        ];
+
+        // RENDER TAB 2 & TAB 3 CARDS ON LOAD
+        window.onload = function() {
+            renderPosCards();
+            renderNegCards();
+        };
+
+        function renderPosCards() {
+            const container = document.getElementById('posCardsContainer');
+            container.innerHTML = posExamples.map(item => `
+                <div class="ancient-card p-5 rounded-sm space-y-3">
+                    <div class="flex justify-between items-start border-b border-xuan-300 pb-2">
+                        <h3 class="font-serif font-bold text-sm sm:text-base text-bamboo-900">${item.title}</h3>
+                        <span class="text-xs font-serif font-bold text-bamboo-800 bg-bamboo-100 px-2.5 py-0.5 rounded-sm border border-bamboo-700/30">${item.virtue}</span>
+                    </div>
+                    
+                    <p class="text-xs sm:text-sm text-ink-900 font-serif leading-relaxed">
+                        <strong class="text-bamboo-900">【言行事例】：</strong>${item.deed}
+                    </p>
+                    
+                    <p class="text-xs text-ink-700 font-serif bg-xuan-50 p-3 rounded-sm border-l-2 border-bamboo-800">
+                        <strong class="text-bamboo-900">【契合解析】：</strong>${item.reason}
+                    </p>
+
+                    <div class="pt-1 flex justify-end">
+                        <button 
+                            onclick="loadAndDiagnose('${escapeStr(item.deed)}', '${escapeStr(item.virtue.split(' / ')[0])}')" 
+                            class="py-1.5 px-4 bg-bamboo-800 hover:bg-bamboo-900 text-xuan-50 font-serif text-xs rounded-sm transition shadow-sm"
+                        >
+                            帶入此事例診斷 ➔
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderNegCards() {
+            const container = document.getElementById('negCardsContainer');
+            container.innerHTML = negExamples.map(item => `
+                <div class="ancient-card p-5 rounded-sm space-y-3 border-l-2 border-cinnabar-700">
+                    <div class="flex justify-between items-start border-b border-xuan-300 pb-2">
+                        <h3 class="font-serif font-bold text-sm sm:text-base text-cinnabar-700">${item.title}</h3>
+                        <span class="text-xs font-serif font-bold text-cinnabar-700 bg-cinnabar-600/10 px-2.5 py-0.5 rounded-sm border border-cinnabar-600/30">${item.virtue}</span>
+                    </div>
+                    
+                    <p class="text-xs sm:text-sm text-ink-900 font-serif leading-relaxed">
+                        <strong class="text-cinnabar-700">【言行事例】：</strong>${item.deed}
+                    </p>
+                    
+                    <p class="text-xs text-ink-700 font-serif bg-cinnabar-600/5 p-3 rounded-sm border-l-2 border-cinnabar-700">
+                        <strong class="text-cinnabar-700">【排雷與失分剖析】：</strong>${item.reason}
+                    </p>
+
+                    <div class="pt-1 flex justify-end">
+                        <button 
+                            onclick="loadAndDiagnose('${escapeStr(item.deed)}', '${escapeStr(item.virtue.replace('（宣稱）', '').split(' / ')[0])}')" 
+                            class="py-1.5 px-4 bg-cinnabar-700 hover:bg-cinnabar-800 text-xuan-50 font-serif text-xs rounded-sm transition shadow-sm"
+                        >
+                            帶入此事例診斷 ➔
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function escapeStr(str) {
+            return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        }
+
+        // TAB SWITCHING FUNCTION
+        function switchTab(tabIndex) {
+            // Reset Tab Buttons
+            for (let i = 1; i <= 3; i++) {
+                const btn = document.getElementById(`tabBtn${i}`);
+                const content = document.getElementById(`tabContent${i}`);
+                
+                if (i === tabIndex) {
+                    content.classList.remove('hidden');
+                    btn.className = `flex-1 py-3 px-2 sm:px-4 text-center font-bold border-t border-l border-r rounded-t-sm transition-all duration-200 shadow-sm ${
+                        i === 3 ? 'bg-cinnabar-700 text-xuan-50 border-cinnabar-800' : 'bg-bamboo-800 text-xuan-50 border-bamboo-900'
+                    }`;
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = `flex-1 py-3 px-2 sm:px-4 text-center font-bold border-t border-l border-r border-xuan-300 rounded-t-sm transition-all duration-200 bg-xuan-100 text-ink-800 hover:bg-xuan-200`;
+                }
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function loadAndDiagnose(deedText, virtueText) {
+            document.getElementById('deedInput').value = deedText;
+            document.getElementById('virtueInput').value = virtueText;
+            switchTab(1);
+            diagnoseInput();
+        }
+
+        function selectTag(tagName) {
+            document.getElementById('virtueInput').value = tagName;
+        }
+
+        function resetForm() {
+            document.getElementById('deedInput').value = '';
+            document.getElementById('virtueInput').value = '';
+            document.getElementById('resultCard').classList.add('hidden');
+        }
+
+        // DIAGNOSTIC ENGINE
+        function diagnoseInput() {
+            const deed = document.getElementById('deedInput').value.trim();
+            const virtue = document.getElementById('virtueInput').value.trim();
+
+            if (deed.length < 5) {
+                alert("請輸入更詳細的唐老師言行事例描述！");
+                return;
+            }
+            if (!virtue) {
+                alert("請輸入或選擇對應的中華文化美德！");
+                return;
+            }
+
+            let sealType = "pos";
+            let sealTitle = "上品";
+            let sealSub = "切合題意";
+            let cohesionText = "";
+            let trapText = "";
+            let adviceText = "";
+            let themeText = "";
+
+            // Smart Negation Context Check
+            const hasNegation = /(從不|絕不|沒有|毫無|不曾|未曾)[\s\S]{0,10}(責罵|體罰|打罵|發火|敷衍|放棄|動怒)/.test(deed);
+
+            // Trap Detection
+            let detectedTrap = null;
+
+            if (!hasNegation && /(體罰|打手心|木尺|木間尺|棒下出孝子|罰企|罰站|重打)/.test(deed)) {
+                detectedTrap = "PROHIBITED_PUNISHMENT";
+            } else if (!hasNegation && /(破口大罵|怒罵|罵清潔|你盲|大罵)/.test(deed)) {
+                detectedTrap = "HYPOCRISY_ABUSE";
+            } else if (/(偷偷|試題|透露|試題重點|預先發給|答案|洩題|作弊|徇私|補考前)/.test(deed) && /(測驗|試題|題目|答案)/.test(deed)) {
+                detectedTrap = "CHEAT_LEAK";
+            } else if (/(中山裝|老夫子|摺扇|之乎者也|搖頭晃腦|長衫)/.test(deed)) {
+                detectedTrap = "CLICHE_SYMBOL";
+            } else if (/(紫砂|功夫茶|嫌學生|不請同事|獨享|打擾)/.test(deed)) {
+                detectedTrap = "ISOLATED_HABIT";
+            } else if (/(急救|重病|母親|探望|急救都沒有)/.test(deed) && /(補課|留在課室)/.test(deed)) {
+                detectedTrap = "UNFILIAL_SACRIFICE";
+            } else if (/(吃虧就是佔便宜|和氣生財|不處罰欺凌|忍下啦|傷和氣)/.test(deed)) {
+                detectedTrap = "COWARDLY_RETREAT";
+            } else if (/(賣掉.*房子|露宿街頭|賣房)/.test(deed)) {
+                detectedTrap = "EXAGGERATED_MELODRAMA";
+            } else if (/(風水陣|拜三拜|迷信)/.test(deed)) {
+                detectedTrap = "SUPERSTITION";
+            } else if (deed.includes("批改作文") || deed.includes("圈出錯別字")) {
+                if (virtue.includes("因材施教") || virtue.includes("仁愛")) {
+                    detectedTrap = "MISMATCH_DUTY";
+                }
+            }
+
+            if (detectedTrap) {
+                if (detectedTrap === "MISMATCH_DUTY") {
+                    sealType = "warn";
+                    sealTitle = "牽強錯配";
+                    sealSub = "美德不符";
+                    cohesionText = `❌ <strong>美德概念錯配：</strong>認真批改作業、圈出錯別字屬於教師的「勤勉敬業 / 恪盡職守」，事例中未體現根據學生個人資質進行個性化引導的動作。將常規工作硬套上「${virtue}」，屬於概念過度延伸。`;
+                    trapText = `⚠️ 考評局評語指出，考生常將常規職責（如批改作業、準時上課）當成特殊的中華美德，導致取材平庸且牽強。`;
+                    adviceText = `💡 <strong>修訂建議：</strong>若要寫「因材施教」，應加入針對該學生特殊專長（如繪畫、體育）或性格缺點進行個性化點撥的具體對話與行動。`;
+                    themeText = `唐老師對學生的教育並非千篇一律的教條，而是察其言、觀其行後的溫和點撥，彰顯了傳統教育中尊重個體差異的深刻智慧。`;
+                } else {
+                    sealType = "neg";
+                    sealTitle = "下品/違題";
+                    sealSub = "考評失分";
+
+                    if (detectedTrap === "CHEAT_LEAK") {
+                        cohesionText = `🚨 <strong>價值觀悖謬（美化舞弊）：</strong>私下透露試題屬於徇私舞弊，嚴重違背了中華文化中「誠信」與「君子行事取之有道」的核心原則。不能用不道德手段來包裝「${virtue}」。`;
+                        trapText = `⚠️ 犯了《考生表現報告》點名的「邏輯硬傷與道德謬誤」缺陷，會直接被歸為下品卷。`;
+                        adviceText = `💡 <strong>修訂建議：</strong>將違規洩題改為唐老師犧牲休息時間進行「一對一補習引導」，既符合誠信，又能展現真正的仁愛與負責。`;
+                    } else if (detectedTrap === "CLICHE_SYMBOL") {
+                        cohesionText = `🚨 <strong>符號化與抽離現實：</strong>穿中山裝、戴老夫子帽、滿口「之乎者也」屬於極度抽離現代校園生活的符號堆砌。`;
+                        trapText = `⚠️ 此乃 DSE 2012 考生報告中明確點名的「下品」特徵，顯得虛假造作，完全無法呈現真實待人接物。`;
+                        adviceText = `💡 <strong>修訂建議：</strong>將場景還原至現代校園，唐老師只需穿着普通教師服裝，在日常小事（如給予學生尊嚴、關懷弱勢）中展現文化美德。`;
+                    } else if (detectedTrap === "UNFILIAL_SACRIFICE") {
+                        cohesionText = `🚨 <strong>違背倫常（不孝）：</strong>母親重病急救卻棄之不顧，嚴重違背了中華文化核心的「孝道」（百善孝為先）。`;
+                        trapText = `⚠️ 儒家講求「修身齊家」，連至親都不顧的極端奉獻違背人性與倫理，無法令人感受到「可貴」。`;
+                        adviceText = `💡 <strong>修訂建議：</strong>改為唐老師在醫院照顧母親後，第二天疲憊地回校依然堅持認真教學，展現「孝順與敬業」的兼顧。`;
+                    } else if (detectedTrap === "HYPOCRISY_ABUSE") {
+                        cohesionText = `🚨 <strong>言行不一與偽善：</strong>口談儒家道德卻破口大罵清潔工人，展示了偽善與言行不一。`;
+                        trapText = `⚠️ 題目要求「不喜歡說大道理」，此描寫既犯了大道理說教，又嚴重破壞教師形象，無法抒發敬愛之情。`;
+                        adviceText = `💡 <strong>修訂建議：</strong>刪除說教與罵人情節，改為唐老師遇到工友時主動點頭打招呼或幫忙推門的真實身教。`;
+                    } else if (detectedTrap === "PROHIBITED_PUNISHMENT") {
+                        cohesionText = `🚨 <strong>宣揚體罰與暴力：</strong>用木尺打手心宣揚暴力，違反現代教育理念，亦與儒家「仁者愛人」相悖。`;
+                        trapText = `⚠️ 體罰無法讓人體會到文化的可貴，只會引發恐懼與反感。`;
+                        adviceText = `💡 <strong>修訂建議：</strong>改為唐老師面對學生犯錯時進行溫和自省與啟發引導。`;
+                    } else {
+                        cohesionText = `🚨 <strong>情節誇張失真或違背題意：</strong>事例脫離現代生活常理，未能適當體現「${virtue}」。`;
+                        trapText = `⚠️ 考評局強調取材必須真實普遍，過度誇張或迷信將被列入下品。`;
+                        adviceText = `💡 <strong>修訂建議：</strong>取材應回歸校園日常平凡細節。`;
+                    }
+                    themeText = `寫作應回歸生活中真實普遍的情境。真正的文化美德從不在於極端矯情或古代符號，而是藏在平實、真誠的校園言行之中。`;
+                }
+            } else {
+                sealType = "pos";
+                sealTitle = "上品";
+                sealSub = "切合題意";
+                cohesionText = `✅ <strong>美德與言行高度契合：</strong>唐老師的具體言行細節自然流露出「${virtue}」的內涵。唐老師做多於說，切合題目「不喜歡說大道理」的要求。`;
+                trapText = `✨ <strong>避雷成功：</strong>完全沒有出現抽離現實的古風符號或極端矯情情節，取材貼近真實校園生活，符合考評局上品試卷標準。`;
+                adviceText = `💡 <strong>深化建議：</strong>可進一步加強當時「我」的心理活動與對視描寫（如唐老師溫和的眼神或輕拍肩膀的動作），使人物形象更加豐滿立體。`;
+                
+                themeText = `「身教重於言教。」唐老師雖從不說大道理，但他在日常細節中對學生的尊嚴護持與包容引導，讓學生切身感受到了中華文化中「${virtue}」的真摯與可貴。`;
+            }
+
+            document.getElementById('sealText').innerText = sealTitle;
+            document.getElementById('sealSub').innerText = sealSub;
+            document.getElementById('ratingSeal').className = `seal-stamp ${sealType}`;
+
+            document.getElementById('cohesionAnalysis').innerHTML = cohesionText;
+            document.getElementById('trapAnalysis').innerHTML = trapText;
+            document.getElementById('adviceAnalysis').innerHTML = adviceText;
+            document.getElementById('themeText').innerHTML = themeText;
+
+            document.getElementById('resTimeStamp').innerText = `評估時間：${new Date().toLocaleString()}`;
+            document.getElementById('resultCard').classList.remove('hidden');
+
+            document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyReport() {
+            const deed = document.getElementById('deedInput').value;
+            const virtue = document.getElementById('virtueInput').value;
+            const seal = document.getElementById('sealText').innerText;
+            const cohesion = document.getElementById('cohesionAnalysis').innerText;
+            const trap = document.getElementById('trapAnalysis').innerText;
+            const advice = document.getElementById('adviceAnalysis').innerText;
+            const theme = document.getElementById('themeText').innerText;
+
+            const reportStr = `【唐老師言行與中華文化美德對應診斷報告】\n\n- 言行事例：${deed}\n- 對應美德：${virtue}\n- 評估結果：[${seal}]\n\n1. 契合度分析：\n${cohesion}\n\n2. 考評避雷警告：\n${trap}\n\n3. 改善與深化建議：\n${advice}\n\n4. 系統提煉寫作立意：\n${theme}`;
+
+            navigator.clipboard.writeText(reportStr).then(() => {
+                alert("診斷報告已成功複製到剪貼簿！");
+            }).catch(() => {
+                alert("複製失敗，請手動選取複製。");
+            });
+        }
+
+        function exportOutline() {
+            const deed = document.getElementById('deedInput').value;
+            const virtue = document.getElementById('virtueInput').value;
+            const seal = document.getElementById('sealText').innerText;
+            const theme = document.getElementById('themeText').innerText;
+
+            const txtContent = `=======================================\nDSE 卷二 寫作大綱規劃書（唐老師言行與美德）\n=======================================\n\n【題目】記述唐老師言行，體會中華文化可貴的一面\n【診斷評級】${seal}\n【對應美德】${virtue}\n\n一、開首（引入人物）\n- 點出唐老師「不喜歡說大道理」的特點\n- 交代唐老師外貌與日常待人接物的溫和態度\n\n二、正文故事（具體事例描寫）\n- 事例描寫：${deed}\n- 細節加強：加入動作、神態與對話描寫，避免大道理訓話\n\n三、情感體會（文化可貴之處）\n- 描述「我」當時的感受與思想轉變\n- 說明此言行如何體現了「${virtue}」的中華文化智慧\n\n四、結尾昇華（立意總結）\n- ${theme}\n`;
+
+            const blob = new Blob([txtContent], { type: "text/plain;charset=utf-8" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `DSE寫作大綱_唐老師美德_${virtue}.txt`;
+            link.click();
+        }
+    </script>
+</body>
+</html>
